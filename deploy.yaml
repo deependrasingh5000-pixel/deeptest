@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deeptest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deeptest
+  template:
+    metadata:
+      labels:
+        app: deeptest
+    spec:
+      containers:
+      - name: deeptest
+        image: deependrasingh5000pixel/deeptest:v1
+        imagePullPolicy: Always
